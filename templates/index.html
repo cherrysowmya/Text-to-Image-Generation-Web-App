@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Text 2 Image | Stable Diffusion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="box">
+
+      <div class="input-container">
+        <div class="top-header">
+          <header>Text To Image Generation using Stable Diffusion</header>
+        </div>
+        <form method="post" action="/" enctype="multipart/form-data">
+          <div class="input-field">
+            <textarea name="input-text" class="input" rows="3" cols="80" placeholder="Input text here" required>{{ request.form['input-text'] }}</textarea>
+          </div>
+          <div class="input-field">
+            <input type="submit" class="submit" value="Generate">
+          </div>
+        </form>
+      </div>
+
+      <div class="image-container">
+          <image class = "image" src = "{{ url_for('static', filename='images/testimage.jpg') }}"></image>
+      </div>
+
+    </div>
+  </body>
+</html>

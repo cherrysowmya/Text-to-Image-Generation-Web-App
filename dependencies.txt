@@ -1,0 +1,7 @@
+diffusers 
+scipy 
+ftfy  
+torch
+transformers
+flask
+pickle
